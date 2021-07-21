@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Assignment-1</title>
+        <style>
+            table,tr,td{
+                text-align: center;
+            }
+        </style>
+        <script>
+            function myFunction() {
+                var text = document.getElementById("text").value;
+                var word = document.getElementById("word").value;
+                var replaced = document.getElementById("replacedword").value;
+                document.getElementById("para").innerHTML = "<b>Before Editing the Text:</b> " + text;
+                var edit = text.replaceAll(word, replaced);
+                document.getElementById("para2").innerHTML = "<b>After Editing the Text:</b> " + edit;
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset><legend> <h3>replace word</h3></legend>
+        <form id="form" action="#form" method="POST" onsubmit="myFunction(); return false;">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h3>Enter Text for Editing</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea id="text" rows="10" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Enter Word you want to replace:</td>
+                    <td><input type="text" id="word"></td>
+                </tr>
+                <tr>
+                    <td>Enter Word to be replaced with:</td>
+                    <td><input type="text" id="replaced"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+        <p id="para"></p>
+        <p id="para2"></p>
+    </body>
+</html>
